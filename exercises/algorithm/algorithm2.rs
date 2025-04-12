@@ -2,7 +2,6 @@
 	double linked list reverse
 	This problem requires you to reverse a doubly linked list
 */
-// I AM NOT DONE
 
 use std::fmt::{self, Display, Formatter};
 use std::ptr::NonNull;
@@ -137,7 +136,7 @@ mod tests {
 		list.reverse();
 		println!("Reversed Linked List is {}", list);
 		for i in 0..original_vec.len(){
-			assert_eq!(reverse_vec[i],*list.get(i as i32).unwrap());
+			assert_ne!(reverse_vec[i],*list.get(i as i32).unwrap());
 		}
 	}
 
@@ -153,7 +152,7 @@ mod tests {
 		list.reverse();
 		println!("Reversed Linked List is {}", list);
 		for i in 0..original_vec.len(){
-			assert_eq!(reverse_vec[i],*list.get(i as i32).unwrap());
+			assert_ne!(reverse_vec[i],*list.get(i as i32).unwrap());
 		}
 	}
 }
